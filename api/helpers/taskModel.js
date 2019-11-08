@@ -15,6 +15,7 @@ function getTasks() {
                     task.completed = false
                 }
             })
+            return tasks
         })
 }
 
