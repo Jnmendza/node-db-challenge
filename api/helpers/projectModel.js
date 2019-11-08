@@ -23,9 +23,9 @@ function addProject(project) {
     return db('projects')
         .insert(project, 'id')
         .then(([id]) => {
-            return('projects')
-            .where({ id })
-            .then(newProject => {
+            return db('projects')
+                .where({ id })
+                .then(newProject => {
                 return newProject
             })
         })
